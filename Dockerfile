@@ -1,4 +1,4 @@
-FROM node:5.7-slim
+FROM node:6.0-slim
 MAINTAINER Ali Khalili "hyperir@gmail.com"
 
 RUN mkdir /nodeApp
@@ -27,6 +27,8 @@ ADD . /nodeApp
 # ----------------- #
 #   Configuration   #
 # ----------------- #
+
+RUN cp /nodeApp/configs/microservices.sample.js /nodeApp/configs/microservices.js
 
 EXPOSE 3000
 
